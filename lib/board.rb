@@ -29,7 +29,9 @@ class Board
   end
 
   def valid_move?(row, col)
-    @grid[row][col] == "   "
+    num_arr = "123456789".chars
+    cell = @grid[row][col].strip
+    num_arr.include?(cell)
   end
 
   def full?
