@@ -61,8 +61,8 @@ class Board
 
   def diagonals
     [
-      [[0, 0], [1, 1], [2, 2]],
-      [[0, 2], [1, 1], [2, 0]]
+      [@grid[0][0], @grid[1][1], @grid[2][2]],
+      [@grid[0][2], @grid[1][1], @grid[2][0]]
     ]
   end
 
