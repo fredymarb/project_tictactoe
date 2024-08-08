@@ -1,11 +1,12 @@
+require "colorize"
 require_relative "board"
 require_relative "player"
 
 class Game
   def initialize
     @board = Board.new
-    @player1 = Player.new("Player 1", " X ")
-    @player2 = Player.new("Player 2", " O ")
+    @player1 = Player.new("Player 1".colorize(:blue), " X ".colorize(:blue))
+    @player2 = Player.new("Player 2".colorize(:green), " O ".colorize(:green))
     @current_player = @player1
   end
 
