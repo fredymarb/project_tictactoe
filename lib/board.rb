@@ -3,6 +3,14 @@ class Board
 
   def initialize
     @grid = Array.new(3) { Array.new(3, "   ") }
+
+    @count = 1
+    @grid.each do |rows|
+      rows.each_index do |index|
+        rows[index] = " #{@count} "
+        @count += 1
+      end
+    end
   end
 
   def display
@@ -45,7 +53,10 @@ class Board
   end
 
   def diagonals
-    [[0, 0], [1, 1], [2, 2], [0, 2], [1, 1], [2, 0]]
+    [
+      [[0, 0], [1, 1], [2, 2]],
+      [[0, 2], [1, 1], [2, 0]]
+    ]
   end
 
   protected
