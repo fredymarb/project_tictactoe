@@ -33,7 +33,12 @@ class Board
   end
 
   def full?
-    @grid.flatten.none?("   ")
+    nums_arr = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
+    grid = @grid.flatten
+
+    return false if grid.intersect?(nums_arr)
+
+    true
   end
 
   def winner?(marker)
